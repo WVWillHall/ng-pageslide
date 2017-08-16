@@ -218,7 +218,7 @@
                         }
 
                         if (param.clickOutside) {
-                            $document.off('touchend click', onBodyClick);
+                            $document.off('click', onBodyClick);
                         }
                         isOpen = false;
                         setBodyClass('closed');
@@ -264,7 +264,7 @@
                         }
 
                         if (param.clickOutside) {
-                            $document.on('touchend click', onBodyClick);
+                            $document.on('click', onBodyClick);
                         }
                         setBodyClass('open');
                     }
@@ -309,7 +309,7 @@
                     scope.$on('$destroy', function () {
                         if (slider.parentNode === body) {
                             if (param.clickOutside) {
-                                $document.off('touchend click', onBodyClick);
+                                $document.off('click', onBodyClick);
                             }
                             body.removeChild(slider);
                         }
